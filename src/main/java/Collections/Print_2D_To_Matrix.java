@@ -5,6 +5,10 @@ public class Print_2D_To_Matrix {
 
         int[][] arr1 = {{1, 2, 3}, {4, 5, 6}};
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec8d7355e66f40ecbf00fbf73c06490eaf9826dd
         for (int i = 0; i < arr1.length; i++) {
 
             for (int j = 0; j < (arr1[0].length); j++) {
@@ -13,8 +17,15 @@ public class Print_2D_To_Matrix {
 
             }
             System.out.println();
+<<<<<<< HEAD
         }
 
+=======
+
+        }
+
+
+>>>>>>> ec8d7355e66f40ecbf00fbf73c06490eaf9826dd
     }
 
 
