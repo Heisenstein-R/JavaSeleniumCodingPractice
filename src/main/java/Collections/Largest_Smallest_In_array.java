@@ -18,7 +18,6 @@ public class Largest_Smallest_In_array {
             System.out.println(i);
         }
 
-
     }
 
 
