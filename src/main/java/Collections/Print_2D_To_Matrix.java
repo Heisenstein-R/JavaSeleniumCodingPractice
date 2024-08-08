@@ -15,9 +15,6 @@ public class Print_2D_To_Matrix {
             System.out.println();
         }
 
-
-
     }
-
 
 }
