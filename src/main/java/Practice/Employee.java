@@ -1,20 +1,17 @@
 package Practice;
 
-class Candidate
-{
-    public Candidate()
-    {
-        System.out.println("Person class constructor called");
+class Candidate {
+    public Candidate() {
+        System.out.println("Candidate class constructor called");
     }
 }
-public class Employee extends Candidate
-{
-    public Employee()
-    {
+
+public class Employee extends Candidate {
+    public Employee() {
         System.out.println("Employee class constructor called");
     }
-    public static void main (String args[])
-    {
+
+    public static void main(String args[]) {
         Employee e = new Employee();
     }
 }

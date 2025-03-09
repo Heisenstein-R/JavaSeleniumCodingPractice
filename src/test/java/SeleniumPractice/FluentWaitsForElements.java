@@ -28,19 +28,19 @@ public class FluentWaitsForElements {
 
         FluentWait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofSeconds(30))
+                .pollingEvery(Duration.ofMillis(30))
                 .ignoring(NoSuchElementException.class)
                 .withMessage("Please check the element maentioned");
 
-        WebElement clickableElement = wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
-                return driver.findElement(By.xpath("//a[text() = 'Hom']"));
+        By clickableElement = wait.until(new Function<WebDriver, By>() {
+            public By apply(WebDriver driver) {
+                return By.xpath("//a[text() = 'Hom']");
             }
         });
 
         WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//a[text() = 'Hom']"))));
 
-        clickableElement.click();
+        driver.findElement(clickableElement).click();
 
         element2.click();
 

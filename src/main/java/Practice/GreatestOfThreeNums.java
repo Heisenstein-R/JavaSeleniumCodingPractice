@@ -26,7 +26,7 @@ public class GreatestOfThreeNums {
 
     public static void main(String[] args) {
 
-        int largestnum = GreatestOfThreeNums.Greaternum(88, 22, 11);
+        int largestnum = GreatestOfThreeNums.Greaternum(88, 909, 11);
 
         System.out.println("Largest num is: " + largestnum);
 

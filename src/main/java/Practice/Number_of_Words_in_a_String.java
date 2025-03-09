@@ -9,7 +9,7 @@ public class Number_of_Words_in_a_String {
 
     public void countWords(){
 
-        String words[] =  string.split(" ");
+        String[] words =  string.split(" ");
 
         for(String word: words){
             System.out.println(word);

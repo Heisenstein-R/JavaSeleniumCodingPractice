@@ -1,13 +1,18 @@
 package SeleniumPractice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.time.Duration;
 
 public class ExceptionHandle {
 
@@ -24,9 +29,12 @@ public class ExceptionHandle {
     }
 
     @Test
-    public void VerifyTest() {
+    public void VerifyTest() throws InterruptedException {
 
         try {
+
+            FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofMillis(10)).ignoring(NoSuchElementException.class).withMessage("Check the element: ");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text() = 'Hom']")));
 
             boolean b = driver.findElement(By.xpath("//a[text() = 'Hom']")).isDisplayed();
 
@@ -37,9 +45,13 @@ public class ExceptionHandle {
             }
 
         } catch (Exception e) {
-            System.out.println("Havent found the Home Element:      "+e.getMessage());
+            System.out.println("Havent found the Home Element:      " + e.getMessage());
         }
 
+
+        FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofMillis(10)).ignoring(NoSuchElementException.class).withMessage("Check the element mentioned");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text() = 'Home']")));
 
         driver.findElement(By.xpath("//a[text() = 'Home']")).click();
 

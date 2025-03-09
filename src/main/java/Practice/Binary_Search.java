@@ -30,7 +30,7 @@ public class Binary_Search {
 
 
     public static void main(String[] args) {
-        int arr[] = {2, 4, 6, 11, 5, 55, 77};
+        int[] arr = {2, 4, 6, 11, 5, 55, 77};
         Arrays.sort(arr);
         int x = 5;
 

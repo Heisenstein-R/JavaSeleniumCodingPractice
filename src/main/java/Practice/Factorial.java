@@ -35,7 +35,7 @@ public class Factorial {
 
     public static void main(String[] args) {
         factorialOf(5);
-        System.out.println(usingRecursive(0));
+        System.out.println(usingRecursive(7));
     }
 
 

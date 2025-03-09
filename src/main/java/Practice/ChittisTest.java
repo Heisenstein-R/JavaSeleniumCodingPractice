@@ -19,7 +19,7 @@ public class ChittisTest {
 
     public static void main(String[] args) {
 
-        ChittisTest.EvenOrOdd(23);
+        ChittisTest.EvenOrOdd(22);
 
     }
 
